@@ -15,7 +15,7 @@ For this project to run you must have ffmpeg installed in your computer, not onl
 * If you get an error when executing, try more than once: There's some randomness involved with the algorithms so the performance can rely on that sometimes.
 
 ## Documentation
-All the docs are located in the docs folder of this project
+All the docs are located in the docs folder of this project. You can visit it in this link: https://iagolobla.github.io/episode_binger/
 
 ## Quick Start
 You can try this short program as an example:
