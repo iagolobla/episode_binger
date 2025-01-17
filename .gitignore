@@ -1,0 +1,10 @@
+dist
+build
+html
+input_data/
+output_data/
+**/__pycache__/
+*.log
+*.mp4
+*.egg*
+*.json

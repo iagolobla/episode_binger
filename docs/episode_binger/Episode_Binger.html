@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>episode_binger.Episode_Binger API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>episode_binger.Episode_Binger</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="episode_binger.Episode_Binger.Episode_Binger"><code class="flex name class">
+<span>class <span class="ident">Episode_Binger</span></span>
+<span>(</span><span>distance_algorithm_type: <a title="episode_binger.Algorithms.Distance.Distance_Algorithm_Type" href="Algorithms/Distance/index.html#episode_binger.Algorithms.Distance.Distance_Algorithm_Type">Distance_Algorithm_Type</a> = Distance_Algorithm_Type.MANHATTAN_DISTANCE,<br>identical_frame_algorithm_type: <a title="episode_binger.Algorithms.Frames.IdenticalFrameFinder.Identical_Frames_Algorithm_Type" href="Algorithms/Frames/IdenticalFrameFinder/index.html#episode_binger.Algorithms.Frames.IdenticalFrameFinder.Identical_Frames_Algorithm_Type">Identical_Frames_Algorithm_Type</a> = Identical_Frames_Algorithm_Type.RECURSIVE_FINDER,<br>frame_locator_algorithm_type: <a title="episode_binger.Algorithms.Frames.FrameLocator.Frame_Locator_Type" href="Algorithms/Frames/FrameLocator/index.html#episode_binger.Algorithms.Frames.FrameLocator.Frame_Locator_Type">Frame_Locator_Type</a> = Frame_Locator_Type.SEQUENTIAL_FRAME_LOCATOR,<br>boundary_finder_algorithm_type: <a title="episode_binger.Algorithms.Chunks.Boundary_Finder_Type" href="Algorithms/Chunks/index.html#episode_binger.Algorithms.Chunks.Boundary_Finder_Type">Boundary_Finder_Type</a> = Boundary_Finder_Type.ZOOMIN_FINDER)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Episode_Binger():
+    &#34;&#34;&#34;
+    Class to load episodes, find openings and endings and create macro-episodes with only one opening and one ending
+    &#34;&#34;&#34;
+    def __init__(self, distance_algorithm_type: Distance_Algorithm_Type = Distance_Algorithm_Type.MANHATTAN_DISTANCE, identical_frame_algorithm_type: Identical_Frames_Algorithm_Type = Identical_Frames_Algorithm_Type.RECURSIVE_FINDER, frame_locator_algorithm_type: Frame_Locator_Type = Frame_Locator_Type.SEQUENTIAL_FRAME_LOCATOR, boundary_finder_algorithm_type: Boundary_Finder_Type = Boundary_Finder_Type.ZOOMIN_FINDER):
+        &#34;&#34;&#34;
+        Description: Creates an Episode_Binger object.
+
+        Parameters:
+            - distance_algorithm_type: An Distance_Algorithm_Type object to specify which algorithm should be used to calculate distances between frames
+            - identical_frame_algorithm_type: An Identical_Frames_Algorithm_Type object to specify which algorithm should be used to find identical frames
+            - frame_locator_algorithm_type: An Frame_Locator_Type object to specify which algorithm should be used to locate sets of consecutive frames in episodes
+            - boundary_finder_algorithm_type: An Boundary_Finder_Type object to specify which algorithm should be used to find chunk boundaries from an identical pair of frames
+        &#34;&#34;&#34;
+        # Create the distance algorithm object
+        if distance_algorithm_type == Distance_Algorithm_Type.MANHATTAN_DISTANCE:
+            distance_calculator = Manhattan_Distance()
+        elif distance_algorithm_type == Distance_Algorithm_Type.EUCLIDEAN_DISTANCE:
+            distance_calculator = Euclidean_Distance()
+
+        # Create the identical frames algorithm object
+        if identical_frame_algorithm_type == Identical_Frames_Algorithm_Type.RECURSIVE_FINDER:
+            identical_frame_finder = Recursive_Frame_Finder(distance_calculator)
+        if frame_locator_algorithm_type == Frame_Locator_Type.SEQUENTIAL_FRAME_LOCATOR:
+            frame_locator = Sequential_Frame_Locator(distance_calculator, max_loading_frames=5000)
+        frame_algorithm = Frame_Algorithm(identical_frame_finder, frame_locator)
+
+        # Create the chunk_algorithm object
+        if boundary_finder_algorithm_type == Boundary_Finder_Type.ZOOMIN_FINDER:
+            boundary_finder = Zoomin_Boundary_Finder(distance_calculator)
+
+        # Create the algoritm_manager object
+        self.algorithm_manager = Algorithm_Manager(frame_algorithm, boundary_finder)
+        
+        # Create episode DAO
+        self.episode_dao = Episode_DAO()
+
+        # Create Video Assembler
+        self.video_assembler = Video_Assembler()
+
+    def add_episode(self, episode_path: str):
+        &#34;&#34;&#34;
+        Description: Adds an episode to the episode binger object
+        Parameters:
+            - episode_path: A valid path for an episode
+        &#34;&#34;&#34;
+        self.episode_dao.add_episode(episode_path)
+
+    def find_opening_ending(self):
+        &#34;&#34;&#34;
+        Description: From the episodes added to the episode binger takes two and compares them to find common regions and identifies them as opening and ending based on their locations.
+
+        Return Value: True if the opening and ending were found, False otherwise.
+        &#34;&#34;&#34;
+        # Check if there are 2 episodes at least
+        if len(self.episode_dao.get_episode_list()) &lt; 2:
+            return False
+
+        # Get 2 random episodes
+        e1, e2 = self.episode_dao.get_random_episodes(2)
+
+        openingFound=False
+        endingFound=False
+        opening_chunk_e1 = None
+        opening_chunk_e2 = None
+        ending_chunk_e1 = None
+        ending_chunk_e2 = None
+
+        change_episodes_attempts = 0
+        # Search for opening and ending
+        while not (openingFound and endingFound):
+            # Blind Search
+            if not openingFound and not endingFound:
+                chunks = self.algorithm_manager.find_common_chunk(e1,e2)
+            # Ending Search
+            elif openingFound:
+                chunks = self.algorithm_manager.find_common_chunk(e1,e2,(opening_chunk_e1.end_frame+1,opening_chunk_e2.end_frame+1))
+            # Opening Search
+            elif endingFound:
+                chunks = self.algorithm_manager.find_common_chunk(e1,e2,to_frames=(ending_chunk_e1.start_frame,ending_chunk_e2.start_frame))
+
+            # Chunk not found
+            if not chunks:
+                logger.debug(&#34;Chunk not found, trying again&#34;)
+                change_episodes_attempts+=1
+                if change_episodes_attempts &gt; 20:
+                    # Try again with 2 different episodes
+                    e1, e2 = self.episode_dao.get_random_episodes(2)
+                    openingFound=False
+                    endingFound=False
+                continue
+
+            change_episodes_attempts=0
+
+            e1_chunk, e2_chunk = chunks
+
+            # Check if we are getting an opening or an ending
+            if e1_chunk.isOpening() or e2_chunk.isOpening():
+                opening_chunk_e1 = e1_chunk
+                opening_chunk_e2 = e2_chunk
+                openingFound=True
+            else:
+                ending_chunk_e1 = e1_chunk
+                ending_chunk_e2 = e2_chunk
+                endingFound=True
+
+        # Store openings and endings in the episodes
+        logger.debug(f&#34;Openings: {opening_chunk_e1} and {opening_chunk_e2}&#34;)
+        logger.debug(f&#34;Endings: {ending_chunk_e1} and {ending_chunk_e2}&#34;)
+
+        # Store openings and endings info
+        self.episode_dao.add_openings([opening_chunk_e1,opening_chunk_e2])
+        self.episode_dao.add_endings([ending_chunk_e1, ending_chunk_e2])
+
+        return True
+
+    def _locate_episode_pool(args):
+        obj, config = args
+        return obj.locate_episode(*config)
+
+    def locate_opening_ending_every_episode(self):
+        &#34;&#34;&#34;
+        Description: Given the opening and ending have been identified. Locate them in every added episode.
+        &#34;&#34;&#34;
+        # Check if we have episodes with openings and endings located
+        unlocated_episodes = self.episode_dao.get_all_unlocated_episodes()
+        logger.debug(&#34;Unlocated episodes: [&#34;)
+        for e in unlocated_episodes:
+            logger.debug(f&#34;\t{e},&#34;)
+        logger.debug(&#34;]&#34;)
+        
+        # Select reference episode
+        reference_episode = self.episode_dao.get_random_fully_located_episodes(1)[0]
+        logger.debug(f&#34;Reference episode: {reference_episode}&#34;)
+
+        # Try to locate the openings and endings in the remaining episodes
+        with Pool(processes=len(unlocated_episodes)) as pool:
+            results = pool.map(Episode_Binger._locate_episode_pool, [(self.algorithm_manager,(e, reference_episode)) for e in unlocated_episodes])
+        
+        found_openings=[]
+        found_endings=[]
+        for r in results:
+            op, en = r
+            found_openings.append(op)
+            found_endings.append(en)
+
+
+        logger.debug(f&#34;Found Openings: [&#34;)
+        for c in found_openings:
+            logger.debug(f&#34;\t{c},&#34;)
+        logger.debug(&#34;]&#34;)
+
+        logger.debug(f&#34;Found Endings: [&#34;)
+        for c in found_endings:
+            logger.debug(f&#34;\t{c},&#34;)
+        logger.debug(&#34;]&#34;)
+
+        # Store found openings in their episodes
+        self.episode_dao.add_openings(found_openings)
+
+        # Store found endings in their episodes
+        self.episode_dao.add_endings(found_endings)
+
+    def create_macro_episode(self, macro_episode_path: str = &#34;macro_episode.mp4&#34;):
+        &#34;&#34;&#34;
+        Description: Creates a new video file beggining with an opening, having all the added episodes without their openings and endings and finally, one ending at the end.
+
+        Parameters:
+            - macro_episode_path: Path where the output file should be created
+        &#34;&#34;&#34;
+        # Get a random opening and ending
+        opening = self.episode_dao.get_random_opening()
+        ending = self.episode_dao.get_random_ending()
+
+        # Prepare list of chunks: Opening - All Episodes without opening and ending - Ending
+        chunk_list = []
+
+        # Add opening
+        chunk_list.append(opening)
+
+        # Add every episode without opening or ending
+        for episode in self.episode_dao.get_episode_list():
+            # Check if episode has an opening
+            if episode.opening:
+                # Add section before the opening
+                chunk_list.append(Chunk(episode, 0, episode.opening.start_frame-1))
+
+                # Check if episode has an ending
+                if episode.ending:
+                    # Add section between opening and ending
+                    chunk_list.append(Chunk(episode, episode.opening.end_frame+1, episode.ending.start_frame-1))
+
+                    # Add section after the ending
+                    chunk_list.append(Chunk(episode, episode.ending.end_frame+1, episode.frame_count-1))
+
+                # If there&#39;s no ending
+                else:
+                    # Add section from the end of the opening until end of episode
+                    chunk_list.append(Chunk(episode, episode.opening.end_frame+1, episode.frame_count-1))
+            
+            # If there&#39;s no opening
+            else:
+                # Check if episode has an ending
+                if episode.ending:
+                    # Add section before ending
+                    chunk_list.append(Chunk(episode, 0, episode.ending.start_frame-1))
+
+                    # Add section after ending
+                    chunk_list.append(Chunk(episode, episode.ending.end_frame+1, episode.frame_count-1))
+                
+                # If there&#39;s no ending either
+                else:
+                    # Add the whole episode
+                    chunk_list.append(Chunk(episode, 0, episode.frame_count-1))
+
+        # Add ending
+        chunk_list.append(ending)
+        
+        # Assemble the video with the requested chunks
+        self.video_assembler.create_video(chunk_list, macro_episode_path)
+
+    def save_episodes_info(self, output_path: str = &#34;episode_info.json&#34;):
+        &#34;&#34;&#34;
+        Description: Saves all the found info about the added episodes like openings, endings and their location in every episode in one json file.
+
+        Parameters:
+            - output_path: Path where the json file should be created
+        &#34;&#34;&#34;
+        self.episode_dao.save_episodes_info(output_path)
+
+    def load_episodes_info(self, input_path: str = &#34;episode_info.json&#34;):
+        &#34;&#34;&#34;
+        Description: Load all the info about a set of episodes like openings, endings and their location from a json file.
+
+        Parameters:
+            - input_path: Path where the json file is located
+        &#34;&#34;&#34;
+        self.episode_dao.load_episodes_info(input_path)</code></pre>
+</details>
+<div class="desc"><p>Class to load episodes, find openings and endings and create macro-episodes with only one opening and one ending</p>
+<p>Description: Creates an Episode_Binger object.</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>distance_algorithm_type: An Distance_Algorithm_Type object to specify which algorithm should be used to calculate distances between frames</li>
+<li>identical_frame_algorithm_type: An Identical_Frames_Algorithm_Type object to specify which algorithm should be used to find identical frames</li>
+<li>frame_locator_algorithm_type: An Frame_Locator_Type object to specify which algorithm should be used to locate sets of consecutive frames in episodes</li>
+<li>boundary_finder_algorithm_type: An Boundary_Finder_Type object to specify which algorithm should be used to find chunk boundaries from an identical pair of frames</li>
+</ul></div>
+<h3>Methods</h3>
+<dl>
+<dt id="episode_binger.Episode_Binger.Episode_Binger.add_episode"><code class="name flex">
+<span>def <span class="ident">add_episode</span></span>(<span>self, episode_path: str)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_episode(self, episode_path: str):
+    &#34;&#34;&#34;
+    Description: Adds an episode to the episode binger object
+    Parameters:
+        - episode_path: A valid path for an episode
+    &#34;&#34;&#34;
+    self.episode_dao.add_episode(episode_path)</code></pre>
+</details>
+<div class="desc"><p>Description: Adds an episode to the episode binger object</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>episode_path: A valid path for an episode</li>
+</ul></div>
+</dd>
+<dt id="episode_binger.Episode_Binger.Episode_Binger.create_macro_episode"><code class="name flex">
+<span>def <span class="ident">create_macro_episode</span></span>(<span>self, macro_episode_path: str = 'macro_episode.mp4')</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_macro_episode(self, macro_episode_path: str = &#34;macro_episode.mp4&#34;):
+    &#34;&#34;&#34;
+    Description: Creates a new video file beggining with an opening, having all the added episodes without their openings and endings and finally, one ending at the end.
+
+    Parameters:
+        - macro_episode_path: Path where the output file should be created
+    &#34;&#34;&#34;
+    # Get a random opening and ending
+    opening = self.episode_dao.get_random_opening()
+    ending = self.episode_dao.get_random_ending()
+
+    # Prepare list of chunks: Opening - All Episodes without opening and ending - Ending
+    chunk_list = []
+
+    # Add opening
+    chunk_list.append(opening)
+
+    # Add every episode without opening or ending
+    for episode in self.episode_dao.get_episode_list():
+        # Check if episode has an opening
+        if episode.opening:
+            # Add section before the opening
+            chunk_list.append(Chunk(episode, 0, episode.opening.start_frame-1))
+
+            # Check if episode has an ending
+            if episode.ending:
+                # Add section between opening and ending
+                chunk_list.append(Chunk(episode, episode.opening.end_frame+1, episode.ending.start_frame-1))
+
+                # Add section after the ending
+                chunk_list.append(Chunk(episode, episode.ending.end_frame+1, episode.frame_count-1))
+
+            # If there&#39;s no ending
+            else:
+                # Add section from the end of the opening until end of episode
+                chunk_list.append(Chunk(episode, episode.opening.end_frame+1, episode.frame_count-1))
+        
+        # If there&#39;s no opening
+        else:
+            # Check if episode has an ending
+            if episode.ending:
+                # Add section before ending
+                chunk_list.append(Chunk(episode, 0, episode.ending.start_frame-1))
+
+                # Add section after ending
+                chunk_list.append(Chunk(episode, episode.ending.end_frame+1, episode.frame_count-1))
+            
+            # If there&#39;s no ending either
+            else:
+                # Add the whole episode
+                chunk_list.append(Chunk(episode, 0, episode.frame_count-1))
+
+    # Add ending
+    chunk_list.append(ending)
+    
+    # Assemble the video with the requested chunks
+    self.video_assembler.create_video(chunk_list, macro_episode_path)</code></pre>
+</details>
+<div class="desc"><p>Description: Creates a new video file beggining with an opening, having all the added episodes without their openings and endings and finally, one ending at the end.</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>macro_episode_path: Path where the output file should be created</li>
+</ul></div>
+</dd>
+<dt id="episode_binger.Episode_Binger.Episode_Binger.find_opening_ending"><code class="name flex">
+<span>def <span class="ident">find_opening_ending</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_opening_ending(self):
+    &#34;&#34;&#34;
+    Description: From the episodes added to the episode binger takes two and compares them to find common regions and identifies them as opening and ending based on their locations.
+
+    Return Value: True if the opening and ending were found, False otherwise.
+    &#34;&#34;&#34;
+    # Check if there are 2 episodes at least
+    if len(self.episode_dao.get_episode_list()) &lt; 2:
+        return False
+
+    # Get 2 random episodes
+    e1, e2 = self.episode_dao.get_random_episodes(2)
+
+    openingFound=False
+    endingFound=False
+    opening_chunk_e1 = None
+    opening_chunk_e2 = None
+    ending_chunk_e1 = None
+    ending_chunk_e2 = None
+
+    change_episodes_attempts = 0
+    # Search for opening and ending
+    while not (openingFound and endingFound):
+        # Blind Search
+        if not openingFound and not endingFound:
+            chunks = self.algorithm_manager.find_common_chunk(e1,e2)
+        # Ending Search
+        elif openingFound:
+            chunks = self.algorithm_manager.find_common_chunk(e1,e2,(opening_chunk_e1.end_frame+1,opening_chunk_e2.end_frame+1))
+        # Opening Search
+        elif endingFound:
+            chunks = self.algorithm_manager.find_common_chunk(e1,e2,to_frames=(ending_chunk_e1.start_frame,ending_chunk_e2.start_frame))
+
+        # Chunk not found
+        if not chunks:
+            logger.debug(&#34;Chunk not found, trying again&#34;)
+            change_episodes_attempts+=1
+            if change_episodes_attempts &gt; 20:
+                # Try again with 2 different episodes
+                e1, e2 = self.episode_dao.get_random_episodes(2)
+                openingFound=False
+                endingFound=False
+            continue
+
+        change_episodes_attempts=0
+
+        e1_chunk, e2_chunk = chunks
+
+        # Check if we are getting an opening or an ending
+        if e1_chunk.isOpening() or e2_chunk.isOpening():
+            opening_chunk_e1 = e1_chunk
+            opening_chunk_e2 = e2_chunk
+            openingFound=True
+        else:
+            ending_chunk_e1 = e1_chunk
+            ending_chunk_e2 = e2_chunk
+            endingFound=True
+
+    # Store openings and endings in the episodes
+    logger.debug(f&#34;Openings: {opening_chunk_e1} and {opening_chunk_e2}&#34;)
+    logger.debug(f&#34;Endings: {ending_chunk_e1} and {ending_chunk_e2}&#34;)
+
+    # Store openings and endings info
+    self.episode_dao.add_openings([opening_chunk_e1,opening_chunk_e2])
+    self.episode_dao.add_endings([ending_chunk_e1, ending_chunk_e2])
+
+    return True</code></pre>
+</details>
+<div class="desc"><p>Description: From the episodes added to the episode binger takes two and compares them to find common regions and identifies them as opening and ending based on their locations.</p>
+<p>Return Value: True if the opening and ending were found, False otherwise.</p></div>
+</dd>
+<dt id="episode_binger.Episode_Binger.Episode_Binger.load_episodes_info"><code class="name flex">
+<span>def <span class="ident">load_episodes_info</span></span>(<span>self, input_path: str = 'episode_info.json')</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_episodes_info(self, input_path: str = &#34;episode_info.json&#34;):
+    &#34;&#34;&#34;
+    Description: Load all the info about a set of episodes like openings, endings and their location from a json file.
+
+    Parameters:
+        - input_path: Path where the json file is located
+    &#34;&#34;&#34;
+    self.episode_dao.load_episodes_info(input_path)</code></pre>
+</details>
+<div class="desc"><p>Description: Load all the info about a set of episodes like openings, endings and their location from a json file.</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>input_path: Path where the json file is located</li>
+</ul></div>
+</dd>
+<dt id="episode_binger.Episode_Binger.Episode_Binger.locate_opening_ending_every_episode"><code class="name flex">
+<span>def <span class="ident">locate_opening_ending_every_episode</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def locate_opening_ending_every_episode(self):
+    &#34;&#34;&#34;
+    Description: Given the opening and ending have been identified. Locate them in every added episode.
+    &#34;&#34;&#34;
+    # Check if we have episodes with openings and endings located
+    unlocated_episodes = self.episode_dao.get_all_unlocated_episodes()
+    logger.debug(&#34;Unlocated episodes: [&#34;)
+    for e in unlocated_episodes:
+        logger.debug(f&#34;\t{e},&#34;)
+    logger.debug(&#34;]&#34;)
+    
+    # Select reference episode
+    reference_episode = self.episode_dao.get_random_fully_located_episodes(1)[0]
+    logger.debug(f&#34;Reference episode: {reference_episode}&#34;)
+
+    # Try to locate the openings and endings in the remaining episodes
+    with Pool(processes=len(unlocated_episodes)) as pool:
+        results = pool.map(Episode_Binger._locate_episode_pool, [(self.algorithm_manager,(e, reference_episode)) for e in unlocated_episodes])
+    
+    found_openings=[]
+    found_endings=[]
+    for r in results:
+        op, en = r
+        found_openings.append(op)
+        found_endings.append(en)
+
+
+    logger.debug(f&#34;Found Openings: [&#34;)
+    for c in found_openings:
+        logger.debug(f&#34;\t{c},&#34;)
+    logger.debug(&#34;]&#34;)
+
+    logger.debug(f&#34;Found Endings: [&#34;)
+    for c in found_endings:
+        logger.debug(f&#34;\t{c},&#34;)
+    logger.debug(&#34;]&#34;)
+
+    # Store found openings in their episodes
+    self.episode_dao.add_openings(found_openings)
+
+    # Store found endings in their episodes
+    self.episode_dao.add_endings(found_endings)</code></pre>
+</details>
+<div class="desc"><p>Description: Given the opening and ending have been identified. Locate them in every added episode.</p></div>
+</dd>
+<dt id="episode_binger.Episode_Binger.Episode_Binger.save_episodes_info"><code class="name flex">
+<span>def <span class="ident">save_episodes_info</span></span>(<span>self, output_path: str = 'episode_info.json')</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_episodes_info(self, output_path: str = &#34;episode_info.json&#34;):
+    &#34;&#34;&#34;
+    Description: Saves all the found info about the added episodes like openings, endings and their location in every episode in one json file.
+
+    Parameters:
+        - output_path: Path where the json file should be created
+    &#34;&#34;&#34;
+    self.episode_dao.save_episodes_info(output_path)</code></pre>
+</details>
+<div class="desc"><p>Description: Saves all the found info about the added episodes like openings, endings and their location in every episode in one json file.</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li>output_path: Path where the json file should be created</li>
+</ul></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="episode_binger" href="index.html">episode_binger</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="episode_binger.Episode_Binger.Episode_Binger" href="#episode_binger.Episode_Binger.Episode_Binger">Episode_Binger</a></code></h4>
+<ul class="">
+<li><code><a title="episode_binger.Episode_Binger.Episode_Binger.add_episode" href="#episode_binger.Episode_Binger.Episode_Binger.add_episode">add_episode</a></code></li>
+<li><code><a title="episode_binger.Episode_Binger.Episode_Binger.create_macro_episode" href="#episode_binger.Episode_Binger.Episode_Binger.create_macro_episode">create_macro_episode</a></code></li>
+<li><code><a title="episode_binger.Episode_Binger.Episode_Binger.find_opening_ending" href="#episode_binger.Episode_Binger.Episode_Binger.find_opening_ending">find_opening_ending</a></code></li>
+<li><code><a title="episode_binger.Episode_Binger.Episode_Binger.load_episodes_info" href="#episode_binger.Episode_Binger.Episode_Binger.load_episodes_info">load_episodes_info</a></code></li>
+<li><code><a title="episode_binger.Episode_Binger.Episode_Binger.locate_opening_ending_every_episode" href="#episode_binger.Episode_Binger.Episode_Binger.locate_opening_ending_every_episode">locate_opening_ending_every_episode</a></code></li>
+<li><code><a title="episode_binger.Episode_Binger.Episode_Binger.save_episodes_info" href="#episode_binger.Episode_Binger.Episode_Binger.save_episodes_info">save_episodes_info</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>
