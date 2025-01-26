@@ -162,8 +162,10 @@ class Episode_Binger():
         found_endings=[]
         for r in results:
             op, en = r
-            found_openings.append(op)
-            found_endings.append(en)
+            if op:
+                found_openings.append(op)
+            if en:
+                found_endings.append(en)
 
 
         logger.debug(f"Found Openings: [")
