@@ -4,7 +4,7 @@
 This package allows you to take a bunch of episodes with same openings/endings and join them together into one big file with one opening, all the episodes with no openings or endings and one final ending.
 
 ## Installation
-Download the package and then, from the root folder run `python setup.py install`. Then the package should be installed as episode_binger.
+Download the package and then, from the root folder run `python setup.py install`. Then the package should be installed as episode_binger. Note that you need to have setuptools package installed (`pip install setuptools`)
 
 ## Requirements
 For this project to run you must have ffmpeg installed in your computer, not only the python module but the software itself. More information about that here: https://github.com/kkroening/ffmpeg-python/tree/master#installing-ffmpeg.
